@@ -18,9 +18,8 @@ function nedtelling() {
         dager + " dager, " +
         timer + " timer, " +
         minutter + " minutter og " +
-        sekunder + " sekunder igjen!";
+        sekunder + " sek igjen!";
 }
 
 nedtelling();
 setInterval(nedtelling, 1000);
-
