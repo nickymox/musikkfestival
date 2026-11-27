@@ -1,6 +1,4 @@
-
 body {
-
     background-image: url("../festival.jpg");
     background-size: cover;
     background-position: center;
@@ -9,14 +7,13 @@ body {
     min-height: 100vh;
 }
 
+
+/* NAVIGASJON */
+
 nav {
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-
-nav {
     position: sticky;
     top: 0;
     z-index: 100;
@@ -27,6 +24,8 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 25px;
     padding: 15px 25px;
     display: inline-block;
@@ -34,111 +33,82 @@ nav a {
     transition: 0.3s;
 }
 
-nav a:hover {
-    background-color: black;
-    color: rgb(88, 162, 161);
+.artistside nav {
+    position: static;
 }
+
+
+/* OVERSKRIFTER OG TEKST */
 
 h1 {
-    text-align: center;
-    font-size: 50px;
-}
-
-h2 {
-    text-align: center;
-}
-
-p {
-    text-align: center;
-}
-
-h1 {
-    text-shadow: 2px 2px 5px black;
-}
-
-h1 {
-    font-size: 70px;
-    text-align: center;
-    color: rgb(88, 162, 161);
-    text-shadow: 2px 2px 5px black;
-}
-
-p {
-    
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 15px;
-    border-radius: 10px;
-    width: fit-content;
-    margin: 20px auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90px;
     color: white;
-    text-shadow: none;
-}
-
-h2 {
-    font-size: 28px;
     text-align: center;
-    color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px black;
-}
-
-h1 {
     margin-bottom: 10px;
 }
 
-
 h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
     margin-top: 70px;
 }
 
 p {
-    margin-bottom: 30px;
-}
-
-
-h1 {
-    font-size: 90px;
-}
-
-h2 {
-    font-size: 40px;
-}
-
-p {
-    font-size: 26px;
-}
-
-#nedtelling {
-    background-color: rgb(0, 0, 0, 0.7);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
     color: white;
-    padding: 15px 25px;
-    border-radius: 10px;
-    width: fit-content;
-    margin: 20px auto;
-    font-size: 25px;
-    text-shadow: none;
-}
-
-
-.musikktekst {
+    text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 15px;
     border-radius: 10px;
     width: fit-content;
+    margin: 5px auto 30px;
+    text-shadow: none;
+}
+
+.overskrift {
+    font-family: 'Pirata One', cursive;
+    font-size: 145px;
+}
+
+.musikktekst {
     margin: 20px auto;
+}
+
+
+/* NEDTELLING */
+
+#nedtelling {
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: fit-content;
+    max-width: 90%;
+    margin: 20px auto;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
     text-shadow: none;
 }
 
 
+/* ARTISTER */
+
 .artister {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1300px;
-    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    max-width: 1300px;
+    padding: 20px;
     margin: auto;
 }
 
@@ -147,6 +117,7 @@ p {
     border-radius: 15px;
     transition: 0.3s;
     width: 350px;
+    max-width: 100%;
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
@@ -170,116 +141,16 @@ p {
     background-color: rgba(40, 40, 40, 0.9);
 }
 
-@media (max-width: 900px) {
-    .artister {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.artist a {
+    color: inherit;
+    text-decoration: none;
 }
 
-@media (max-width: 500px) {
-    .artister {
-        grid-template-columns: 1fr;
-    }
+.artister a {
+    text-decoration: none;
 }
 
-
-#nedtelling {
-    font-size: 45px;
-    font-weight: bold;
-    color: white;
-    padding: 25px;
-    border-radius: 15px;
-    width: fit-content;
-    max-width: 90%;
-    margin: none;
-    text-align: center;
-    text-shadow: none;
-}
-
-    
-h1, h2 {
-    font-family: Georgia, serif;
-}
-
-p {
-    font-family: Arial, sans-serif;
-}
-
-
-h1 {
-    font-family: 'Pirata One', cursive;
-    font-size: 90px;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    text-align: center;
-}
-
-h2 {
-    font-family: 'Grenze Gotisch', serif;
-    font-size: 45px;
-    font-weight: 700;
-}
-
-p {
-    font-family: 'Grenze Gotisch', serif;
-    font-size: 28px;
-    font-weight: 600;
-}
-
-nav a {
-    font-family: 'Grenze Gotisch', serif;
-    font-weight: 700;
-}
-.artistside nav {
-    position: static;
-}
-.overskrift {
-        font-family: 'Pirata One', cursive;
-    font-size: 90px;
-    color: white;
-    text-shadow: 2px 2px 5px black;
-    text-align: center;
-}
-h1 {
-    font-family: 'Montserrat', sans-serif;
-}
-
-nav a {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
-h2, p {
-    font-family: 'Montserrat', sans-serif;
-}
-
-table {
-    margin: 30px auto;
-    border-collapse: collapse;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6)
-    
-}
-table {
-    margin: 30px auto;
-    border-spacing: 0;
-    border: 2px solid white;
-    border-radius: 20px;
-    overflow: hidden;
-    text-align: center;
-}
-th, td {
-    border: 2px solid white;
-    padding: 20px 40px;
-    font-size: 25px;
-    color: white;
-    border-bottom: 1px solid white;
-}
-
-th {
-    font-weight: bold;
-    border-radius: 12.5;
-}
+/* ARTISTINFORMASJON */
 
 .artistinfo {
     max-width: 750px;
@@ -299,33 +170,200 @@ th {
     font-size: 20px;
 }
 
-.tilbake {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 20px;
+
+/* FESTIVALPROGRAM */
+
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 20px 40px;
+    font-size: 25px;
     color: white;
-    background-color: rgb(0, 0, 0);
+}
+
+th {
+    font-weight: bold;
+}
+
+.box {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 4px;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    background: conic-gradient(
+        from var(--deg),
+        #ff2800,
+        #ff8800,
+        #ffcc00,
+        #9d00ff,
+        #ff00aa,
+        #00ff66,
+        #00ccff,
+        #ff2800
+    );
+
+    animation: autoRotate 2s linear infinite;
+}
+
+.box table {
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.box th, .box td {
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.box th {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.box td {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+
+/* ANIMERT NAVIGASJONSMENY */
+
+.navimeny {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 4px solid transparent;
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    background:
+        linear-gradient(#111, #111) padding-box,
+        conic-gradient(
+            from var(--deg),
+            #ff2800,
+            #ff8800,
+            #ffcc00,
+            #9d00ff,
+            #ff00aa,
+            #00ff66,
+            #00ccff,
+            #ff2800
+        ) border-box;
+
+    animation: autoRotate 2s linear infinite;
+}
+
+.navimeny a {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
     text-decoration: none;
+}
+
+.navimeny a:hover {
+    color: #9d00ff;
+    background: transparent;
+}
+
+
+/* TILBAKE-KNAPP */
+
+
+
+.tilbake {
+    display: table;
+    margin: 20px auto;
+    padding: 12px 20px;
+    border: 4px solid transparent;
     border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    background:
+        linear-gradient(black, black) padding-box,
+        conic-gradient(
+            from var(--deg),
+            #ff2800,
+            #ff8800,
+            #ffcc00,
+            #9d00ff,
+            #ff00aa,
+            #00ff66,
+            #00ccff,
+            #ff2800
+        ) border-box;
+
+    animation: autoRotate 2s linear infinite;
 }
 
 .tilbake:hover {
-    background-color: rgba(40, 40, 40, 0.9);
+    color: #9d00ff;
 }
 
-.artist a {
-    color: inherit;
-    text-decoration: none;
+
+/* INFORMASJONSSIDEN */
+
+.infobokser {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto;
 }
 
-.artist a:hover {
-    text-decoration: none;
+.infoboks {
+    width: 280px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid #9d00ff;
+    border-radius: 15px;
+    text-align: center;
 }
 
-a {
-    text-decoration: none;
+.infoboks h2 {
+    font-size: 28px;
+    margin: 10px 0;
 }
 
-.artistside nav {
-    position: static;
+.infoboks p {
+    background: transparent;
+    font-size: 18px;
+    margin: 10px auto;
+}
+
+
+/* REGNBUEANIMASJON */
+
+@property --deg {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes autoRotate {
+    to {
+        --deg: 360deg;
+    }
 }
